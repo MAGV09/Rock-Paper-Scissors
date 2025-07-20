@@ -1,6 +1,5 @@
 'use strict';
 
-let round = 0;
 const getComuterChoice = function () {
   const randomNum = Math.floor(Math.random() * 3) + 1;
   const computerChoice =
@@ -10,8 +9,14 @@ const getComuterChoice = function () {
 getComuterChoice();
 
 const getHumanChoice = function () {
-  const humanChoice = prompt('Please Enter your Choice').toLowerCase();
-  return humanChoice;
+  let humanChoice = prompt('choose rock,paper or scissors').toLowerCase();
+  if(humanChoice==='rock'||humanChoice==='paper'||humanChoice==='scissors'){
+    return humanChoice
+  } 
+  else{
+    alert(`invalid choice please enter a correct one `);
+   return getHumanChoice()
+  }
 };
 
 let computerSelection = getComuterChoice;
@@ -28,6 +33,8 @@ function playGame() {
     ) {
       computerScore++;
       console.log(`You Lose! ${computerChoice} beats ${humanChoice}`);
+    } else if (computerChoice === humanChoice) {
+      console.log('draw');
     } else {
       humanScore++;
       console.log(`You Won the round!`);
@@ -37,13 +44,16 @@ function playGame() {
     }
   };
   for (let i = 0; i < 5; i++) {
-    playRound(computerSelection(), humanSelection());
+    console.log(`Round:${i + 1}`);
+    playRound(getComuterChoice(), getHumanChoice());
   }
-  if(computerScore> humanScore){
-    console.log(`you have lost to the cpu (${humanScore} -${computerScore}) `);
+  if (computerScore > humanScore) {
+    console.log(`you have lost to the cpu (${humanScore}-${computerScore}) `);
+  } else if(computerScore < humanScore){
+    console.log(`You won (${humanScore}-${computerScore})`);
   }
   else{
-    console.log(`You won (${humanScore}-${computerScore})`);
+    console.log(`Draw! (${humanScore}-${computerScore})`);
   }
 }
 playGame();

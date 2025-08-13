@@ -5,6 +5,11 @@ const container = document.querySelector('#container');
 const display = document.querySelector('#display');
 const roundDetails = document.createElement('div');
 const button = document.createElement('button');
+const mainMenu = document.querySelector('#mainMenu');
+mainMenu.addEventListener('click',()=>{
+  mainMenu.classList.toggle('hide')
+  hero.classList.toggle('hide')
+})
 hero.appendChild(button);
 button.textContent = 'play again';
 button.classList.add('hide');

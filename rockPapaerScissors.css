@@ -40,13 +40,67 @@
   font-weight: 600;
 }
 .playBtn:hover {
-    background-color: #ffc107;
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+  background-color: #ffc107;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
 }
 .dev {
   color: rgb(82, 81, 81);
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 30px;
+}
+
+#hero {
+  width: 1200px;
+  height: 700px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 75px;
+  justify-content: space-around;
+  background: linear-gradient(135deg, #b3e5fc, #9c27b0);
+}
+.round {
+  text-align: center;
+}
+.details {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 50px;
+  color: #1a237e;
+}
+.round {
+  font-size: 25px;
+}
+#container button {
+  width: 220px;
+  height: 100px;
+  font-size: 50px;
+  color: #1a237e;
+  background-color: rgb(238, 238, 238);
+  font-family: 'Poppins', sans-serif;
+
+  font-weight: 600;
+}
+#container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+.images {
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  margin-bottom: 100px;
+}
+img {
+  width: 150px;
+  height: 100px;
+}
+.computerChoiceImg,
+.userChoiceImg {
+  text-align: center;
 }
